@@ -43,11 +43,27 @@ function App() {
     })
   }
 
+  function editTodo(id) {
+    const newTitle = prompt("Enter new title")
+    if (newTitle === null || newTitle === "") return
+
+    setTodos(currentTodos => {
+      return currentTodos.map(todo => {
+        if (todo.id === id) {
+          return { ...todo, title: newTitle }
+        }
+
+        return todo
+      })
+    })
+  }
+
   return (
     <>
+    <h1 className="header">to-do-list</h1>
       <NewTodoForm onSubmit={addTodo} />
-      <h1 className="header">Todo List</h1>
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+      
+      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} editTodo={editTodo}/>
     </>
   )
 }

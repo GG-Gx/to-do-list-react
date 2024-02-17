@@ -14,7 +14,7 @@ import React, { useState } from 'react';
     return (
   <form onSubmit={handleSumit} className="new-item-form">
   <div className="form-row">
-    <label htmlFor="new-todo-input">List</label>
+    <label className="list" htmlFor="new-todo-input"></label>
     <input value={newItem} 
     onChange={e => setNewItem( e.target.value)} 
     type="text" 
