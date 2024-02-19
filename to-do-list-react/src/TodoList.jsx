@@ -5,7 +5,7 @@ function TodoList ({todos, toggleTodo, deleteTodo, editTodo}) {
 
   return (
     <ul className="list">
-      {todos.length === 0 && "No Todos"}
+      {todos.length === 0 && "Add a new item"}
       {todos.map(todo => {
         return (
           <TodoItem
