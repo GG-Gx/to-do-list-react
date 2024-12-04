@@ -21,7 +21,7 @@ import React, { useState } from 'react';
     id="new-todo-input" 
     name="text" 
     autoComplete="off" />
-    <button className="btn">Add</button>
+    <button className="btn-add">Add</button>
   </div>
  </form>)
 }
